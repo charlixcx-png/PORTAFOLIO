@@ -1,0 +1,557 @@
+/* General styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f8f9fa; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+
+.navbar {
+    background-color: #f8f9fa; /* Fondo claro */
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.navbar-brand {
+    color: #343a40; /* Color oscuro para la marca */
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar-toggler {
+    border-color: #343a40; /* Color de borde para el botón de menú */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='30' height='30'%3E%3Cpath stroke='rgba%28120,120,120,1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-nav .nav-link {
+    color: #343a40; /* Color oscuro para los enlaces */
+    font-size: 1rem;
+    padding: 8px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #e9ecef; /* Fondo gris claro en hover */
+    color: #007bff; /* Enlace azul en hover */
+}
+
+.navbar-nav .nav-link.active {
+    color: #007bff; /* Color azul para el enlace activo */
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    background-color: #f8f9fa; /* Fondo claro del menú desplegable */
+    border: 1px solid #ced4da; /* Borde gris claro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.dropdown-item {
+    color: #343a40; /* Color oscuro para los ítems del dropdown */
+    padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+    background-color: #e9ecef; /* Fondo gris claro en hover */
+}
+
+.form-control {
+    border: 2px solid #007bff; /* Borde azul del input de búsqueda */
+    border-radius: 25px;
+    padding: 10px 15px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #0056b3; /* Borde azul más oscuro en focus */
+    box-shadow: none; /* Quita el efecto de sombra predeterminado */
+}
+
+.btn-outline-success {
+    color: #28a745; /* Verde para el botón de búsqueda */
+    border-color: #28a745;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745; /* Fondo verde en hover */
+    color: #fff; /* Texto blanco en hover */
+}
+
+/* Accordion*/
+.accordion-flush {
+    border: 1px solid #dee2e6; /* Borde sutil para separar el acordeón del fondo */
+    border-radius: 5px;
+    background-color: #f8f9fa; /* Fondo claro */
+    margin-bottom: 20px;
+}
+
+/* Estilos para los botones del acordeón */
+.accordion-button {
+    background-color: #007bff; /* Color de fondo azul para los botones */
+    color: #fff; /* Texto blanco */
+    font-size: 1.2rem;
+    padding: 15px;
+    border: none; /* Sin bordes */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #0056b3; /* Fondo azul más oscuro cuando está abierto */
+    color: #fff; /* Texto blanco */
+}
+
+.accordion-button:hover {
+    background-color: #0056b3; /* Fondo azul más oscuro al pasar el mouse */
+}
+
+.accordion-button:focus {
+    box-shadow: none; /* Sin sombra al enfocar */
+}
+
+/* Estilo de los headers */
+.accordion-header {
+    margin-bottom: 0;
+    border-bottom: 1px solid #dee2e6; /* Borde para separar los ítems */
+}
+
+.accordion-header:last-child {
+    border-bottom: none; /* Elimina el borde del último ítem */
+}
+
+/* Estilo del contenido del acordeón */
+.accordion-body {
+    background-color: #fff; /* Fondo blanco para el contenido */
+    padding: 20px;
+    border-top: 1px solid #dee2e6; /* Borde superior para el cuerpo del contenido */
+    font-size: 1rem;
+    color: #343a40; /* Texto oscuro */
+}
+
+.accordion-collapse {
+    border: none; /* Sin bordes alrededor de los contenidos colapsados */
+}
+
+/*BUTTONS*/
+/* Estilo para el botón primario */
+.btn-primary {
+    background-color: #007bff; /* Color azul primario */
+    border: 1px solid #007bff;
+    color: #fff; /* Texto blanco */
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    opacity: 0.65; /* Reduce la opacidad para mostrar que está deshabilitado */
+}
+
+/* Estilo para el botón secundario */
+.btn-secondary {
+    background-color: #6c757d; /* Color gris secundario */
+    border: 1px solid #6c757d;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    opacity: 0.65;
+}
+
+/* Estilo para el botón primario con borde */
+.btn-outline-primary {
+    background-color: transparent; /* Fondo transparente */
+    border: 1px solid #007bff; /* Borde azul primario */
+    color: #007bff; /* Texto azul primario */
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    opacity: 0.65;
+}
+
+/* Estilo para el botón secundario con borde */
+.btn-outline-secondary {
+    background-color: transparent;
+    border: 1px solid #3c9ad9; /* Borde gris secundario */
+    color: #8aaed2; /* Texto gris secundario */
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    opacity: 0.65;
+}
+
+
+/* Card */
+.card {
+    width: 18rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra para dar efecto de profundidad */
+    overflow: hidden; /* Ocultar el contenido que se salga de los bordes */
+    transition: box-shadow 0.3s ease; /* Transición suave para el efecto de hover */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el mouse */
+}
+
+/* Estilos para la imagen de la card */
+.card-img-top {
+    width: 100%; /* La imagen toma el 100% del ancho de la tarjeta */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    object-fit: cover; /* Hace que la imagen se ajuste dentro de la tarjeta, recortando si es necesario */
+}
+
+/* Estilos para el cuerpo de la card */
+.card-body {
+    padding: 15px;
+    background-color: #fff;
+}
+
+/* Estilos para el título de la card */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el texto de la card */
+.card-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+/* Estilos para el botón */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: rgb(116, 202, 225);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}
+
+/*Modal*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  }
+  
+  /* Estilos para el diálogo del modal */
+  .modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 1.75rem auto;
+    max-width: 500px; /* Ajusta el tamaño del modal */
+  }
+  
+  /* Estilos para el contenido del modal */
+  .modal-content {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.3rem;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Estilos para el encabezado del modal */
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+    background-color: #f8f9fa; /* Fondo claro */
+  }
+  
+  /* Título del modal */
+  .modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+  }
+  
+  /* Estilos para el botón de cierre del modal */
+  .btn-close {
+    background: none;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.25rem;
+  }
+  
+  /* Estilos para el cuerpo del modal */
+  .modal-body {
+    position: relative;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #212529;
+  }
+  
+  /* Estilos para el pie del modal */
+  .modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  /* Botones en el pie del modal */
+  .modal-footer .btn {
+    margin-left: 0.5rem;
+  }
+  
+  /* Transición para suavizar la apertura y cierre del modal */
+  .modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+  }
+  
+  .modal.show .modal-dialog {
+    transform: translate(0, 0);
+  }
+
+  /* Progress */
+  /* Contenedor de la barra de progreso */
+.progress {
+    display: flex;
+    height: 1.5rem; /* Altura de la barra */
+    overflow: hidden;
+    background-color: #e9ecef; /* Color de fondo de la barra vacía */
+    border-radius: 0.25rem;
+    box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1); /* Sombra interna */
+  }
+  
+  /* Barra de progreso que muestra el avance */
+  .progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff; /* Color de la barra de progreso (puedes cambiar este color) */
+    width: 0%; /* Ancho inicial */
+    color: white; /* Color del texto dentro de la barra */
+    font-weight: bold;
+    transition: width 0.6s ease; /* Transición suave cuando cambia el ancho */
+  }
+  
+  /* Para un diseño más estilizado */
+  .progress-bar-striped {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem;
+  }
+  
+  .progress-bar-animated {
+    animation: progress-bar-stripes 1s linear infinite;
+  }
+  
+  /* Animación de las rayas */
+  @keyframes progress-bar-stripes {
+    0% {
+      background-position: 1rem 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+/* Spinner */
+.spinner-border {
+    display: inline-block;
+    width: 3rem; /* Ajusta el tamaño del spinner */
+    height: 3rem;
+    vertical-align: text-bottom;
+    border: 0.25em solid currentColor; /* Borde del spinner */
+    border-right-color: transparent; /* Hace que un lado sea transparente para generar el efecto de giro */
+    border-radius: 50%;
+    animation: spinner-border 0.75s linear infinite; /* Animación de giro */
+  }
+  
+  /* Animación del spinner */
+  @keyframes spinner-border {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+/* Tooltips */
+.tooltip-inner {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Iconic link */
+.btn i {
+    margin-right: 5px;
+}
+
+/* Floating labels */
+.form-floating label {
+    color: #007bff;
+}
+
+.form-floating .form-control {
+    border-color: #007bff;
+}
+
+/* Backgrounds and Borders */
+.bg-primary {
+    background-color: #007bff !important;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .border-danger {
+    border: 1px solid #dc3545;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+/* SCROLLSPY */
+.list-group-item {
+    background-color: #f8f9fa; /* Light background for list items */
+    border: 1px solid #ddd; /* Border to separate items */
+    cursor: pointer;
+}
+
+.list-group-item:hover, 
+.list-group-item:focus {
+    background-color: #007bff; /* Highlighted background on hover */
+    color: white; /* Change text color to white */
+}
+.scrollspy-example {
+    position: relative;
+    height: 400px; /* Set a fixed height for the scrollable area */
+    margin-top: 20px;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    padding: 10px;
+    border: 1px solid #ddd; /* Border around the scrollable content */
+    background-color: #f8f9fa; /* Light background */
+}
+
+.scrollspy-example h4 {
+    margin-top: 40px; /* Add spacing between sections */
+}
+
+.scrollspy-example p {
+    font-size: 14px; /* Smaller font for the text */
+    line-height: 1.5; /* Comfortable line spacing */
+    color: #6c757d; /* Light gray text color */
+}
+
+/* Add an active state for the list item that's currently in view */
+.list-group-item.active {
+    background-color: #007bff; /* Blue background */
+    border-color: #007bff; /* Blue border */
+    color: white; /* White text */
+}
+/* Sticky Footer */
+.footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+  }
+  
+  /* Carousel */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+  }
+  
+.carousel-caption h5 {
+    font-size: 1.75rem;
+  }
+  
+.carousel-caption p {
+    font-size: 1.25rem;
+  }
+  
+  /* Loading Button */
+  .btn-primary[disabled] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    cursor: not-allowed;
+  }
+  
+  .spinner-border {
+    margin-right: 0.5rem;
+  }
+/*TOAST*/
+.toast {
+    max-width: 350px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    color: #000;
+}
+
+.toast-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.toast-body {
+    padding: 0.75rem;
+}
+
+.rounded {
+    border-radius: 0.25rem;
+}
+
+.me-2 {
+    margin-right: 0.5rem;
+}
+
+.me-auto {
+    margin-right: auto;
+}
+
+.btn-close {
+    padding: 0.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}

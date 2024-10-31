@@ -1,0 +1,149 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #cfd4d0;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: darkseagreen;
+    color: #fff;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.destination {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.destination-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #477853;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.flag {
+    width: 50px;
+    height: auto;
+}
+
+.location-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.location-details ul li {
+    margin: 5px 0;
+}
+
+.description {
+    margin-top: 20px;
+}
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 400px; /* Ajusta la altura según sea necesario */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
+    display: block;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+.back-button {
+    display: block; /* Asegura que el botón se comporte como un elemento de bloque */
+    margin: 20px auto; /* Esto centra el botón horizontalmente */
+    padding: 12px 24px;
+    background-color: #609761;
+    color: rgb(213, 229, 213);
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.back-button:hover {
+    background-color: #488446; /* Un tono más oscuro al hacer hover */
+    cursor: pointer;
+}
+.button-container {
+    text-align: center; /* Esto alinea todo el contenido dentro del contenedor al centro */
+}
+

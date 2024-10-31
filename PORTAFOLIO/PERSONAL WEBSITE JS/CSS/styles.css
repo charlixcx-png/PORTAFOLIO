@@ -1,0 +1,499 @@
+body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Courier New', sans-serif;
+   background-color: #f9f9f9;
+   color: #000;
+}
+
+/* Estilo del header y el nav */
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 10%;
+   background-color: #fff;
+   border-bottom: 1px solid #f2f4f2;
+}
+
+header h1 {
+   font-family: 'Courier New',sans-serif;
+   font-size: 1.3em;
+   margin: 0;
+}
+
+nav ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   gap: 30px;
+}
+
+nav ul li {
+   display: inline;
+}
+
+nav ul li a {
+   text-decoration: none;
+   color: #000;
+   font-family: 'Courier New',sans-serif;
+}
+
+/* Estilos básicos para la sección */
+.hero-section {
+   position: relative;
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+
+/* Imagen de fondo */
+.hero-image {
+   position: absolute;
+   top: -2%; /* Ajustar la posición de la imagen */
+   left: 0;
+   width: 100%;
+   height: 150vh; /* Aumentar la altura para cubrir más espacio */
+   object-fit: cover;
+   filter: blur(10px); /* Aplicamos blur al inicio */
+   transition: filter 0.5s ease; /* Transición del blur */
+}
+
+/* Texto del título */
+.hero-text {
+   font-family: 'Courier New',sans-serif;
+   position: relative;
+   color: white;
+   font-size: 4em;
+   z-index: 1;
+   opacity: 1;
+   transition: opacity 0.5s ease; /* Transición de la opacidad */
+}
+
+/* Cuando hacemos scroll */
+.scrolled .hero-image {
+   filter: blur(0); /* Elimina el blur */
+}
+
+.scrolled .hero-text {
+   opacity: 0; /* Desaparece el texto */
+}
+
+
+/* Ajustes de diseño en general */
+.nav-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+.background-section {
+   background-color: #f4f4f4; /* Fondo claro */
+   padding: 40px 20px;
+   text-align: center;
+   border-top: 1px solid #ccc; /* Línea de separación */
+   border-bottom: 1px solid #ccc;
+   margin-bottom: 20px;
+}
+
+.background-section h2 {
+   font-size: 2em;
+   color: rgb(58, 79, 58); /* Color estilizado para el título */
+}
+
+.background-section p {
+   font-size: 1.2em;
+   color: #333;
+   margin: 10px 0;
+}
+
+.background-section blockquote {
+   font-size: 1.5em;
+   font-style: italic;
+   color: #666;
+   margin: 20px auto;
+}
+
+.background-section blockquote::before {
+   content: "“";
+   font-size: 2em;
+   vertical-align: super;
+   color: #ccc;
+}
+
+.background-section blockquote::after {
+   content: "”";
+   font-size: 2em;
+   vertical-align: super;
+   color: #ccc;
+}
+
+main {
+   background-color: #fff;
+   padding: 20px;
+   margin: 20px 0;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+main h2 {
+   margin-top: 0;
+   color: #060606;
+}
+
+
+footer {
+   background-color: #333;
+   color: #fff;
+   text-align: center;
+   padding: 10px 0;
+}
+
+
+
+h2:hover{
+   color:darkseagreen;
+   font-weight: bolder;
+}
+h3:hover{
+   color:rgb(107, 150, 107);
+   font-weight: bolder;
+}
+.description {
+   margin-top: 10px;
+   padding: 10px;
+   background-color: #f0f0f0;
+   border-left: 4px solid #86A789;
+   border-radius: 5px;
+   display: flex;
+   align-items: center;
+}
+
+.description p {
+   flex: 1;
+   margin: 0;
+}
+
+.edu-logo {
+   width: 80px;
+   height: auto;
+   margin-left: 20px;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.education-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   margin-top: 20px;
+}
+
+/* Lista de educación */
+.education-list {
+   width: 60%;
+}
+
+.description {
+   margin-top: 10px;
+}
+
+/* Estilo de la polaroid */
+.polaroid {
+   width: 30%;
+   padding: 10px;
+   background-color: white;
+   border: 1px solid #ddd;
+   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+   text-align: center;
+   position: relative;
+   transform: rotate(-5deg); /* Inclinación para dar efecto de Polaroid */
+   right: -450px;
+}
+
+.polaroid-image {
+   width: 100%;
+   height: auto;
+   border-bottom: 5px solid #fff; /* Espacio para el pie de foto */
+}
+
+.polaroid-caption {
+   padding-top: 10px;
+   font-size: 14px;
+   color: #555;
+}
+
+/* Ajustar el estilo del contenedor en pantallas más pequeñas */
+@media (max-width: 768px) {
+   .education-container {
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .polaroid {
+       width: 80%;
+       transform: none; /* Eliminar inclinación en pantallas pequeñas */
+   }
+
+   .education-list {
+       width: 100%;
+   }
+}
+body {
+  font-family: 'Courier New';
+  background-color: #dbe8da;
+  margin: 0;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 2em;
+}
+/*skills*/
+#skills {
+   margin: 50px 0;
+   font-family: 'Courier New', sans-serif;
+}
+
+.skill {
+   display: flex;
+   align-items: center;
+   margin-bottom: 15px;
+}
+
+.skill span {
+   width: 150px;
+}
+
+.progress-bar {
+   flex: 1;
+   height: 20px;
+   background-color: #f4f4f4;
+   margin: 0 10px;
+   border-radius: 10px;
+   overflow: hidden;
+}
+
+.progress {
+   height: 100%;
+   background-color: #acd3a2d8;
+   width: 0;
+   border-radius: 10px;
+   transition: width 1.5s ease-in-out;
+}
+
+.progress-bar span {
+   font-size: 14px;
+}
+
+/*icons*/
+.section-title h2 {
+   text-align: center;
+   font-size: 2em;
+   margin-bottom: 40px;
+   font-family: 'Courier New', sans-serif;
+}
+
+/* Contenedor del carrusel */
+.carousel-container {
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+   overflow-x: scroll;
+   padding: 20px 0;
+   scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+   background-color: #f5f5f5;
+   border-radius: 10px;
+   padding: 20px;
+   width: 300px;
+   flex: 0 0 auto;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   text-align: center;
+   scroll-snap-align: start;
+   transition: transform 0.3s ease;
+}
+
+.carousel-item:hover {
+   transform: scale(1.05); /* Efecto hover */
+}
+
+/* Estilo de la imagen */
+.carousel-image {
+   width: 100%;
+   height: auto;
+   border-radius: 10px;
+   margin-bottom: 20px;
+}
+
+/* Información del personaje */
+.person-info h3 {
+   font-size: 1.5em;
+   margin-bottom: 10px;
+   font-family: 'Helvetica Neue', sans-serif;
+}
+
+.person-info p {
+   font-size: 1em;
+   color: #555;
+}
+
+.toggle-info {
+   background-color: #86A789;
+   color: white;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 1em;
+   transition: background-color 0.3s;
+}
+
+.toggle-info:hover {
+   background-color: #86A789;
+}
+
+/* Información extra que se despliega */
+.more-info {
+   display: none;
+}
+.more-info ul {
+   list-style-type: disc;
+   margin-left: 20px;
+}
+
+.more-info ul li {
+   margin-bottom: 10px;
+}
+/* Estilos para ocultar la información adicional */
+.visible {
+   display: block;
+   max-height: none;  /* Quitar limitaciones de altura */
+}
+
+.hidden {
+   display: none;
+}
+
+/*acordeon*/
+.accordion {
+  background-color: #eee;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: background-color 0.4s ease;
+  font-size: 15px; /* Cambia el tamaño de la fuente aquí */
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace; /* Cambia la fuente a Courier New */
+}
+
+.accordion.active {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 15px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-left: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px; /* Espacio entre la imagen y la reseña */
+  padding: 15px 0;
+}
+
+.review-text {
+  flex: 2;
+  text-align: justify;
+}
+
+.review-image {
+  flex: 1;
+}
+
+.review-image img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px; /* Bordes redondeados opcionales */
+}
+/*Agenda*/
+.schedule-section {
+   background-color: #eaf6ec;
+   padding: 40px;
+   border-radius: 10px;
+   max-width: 800px;
+   margin: 0 auto;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-form h3 {
+   font-size: 1em;
+   margin-bottom: 15px;
+}
+
+.schedule-subsection {
+   margin-bottom: 30px;
+}
+
+.schedule-subsection hr {
+   border: 0;
+   height: 1px;
+   background: #ccc;
+   margin-bottom: 20px;
+}
+
+label {
+   font-size: 1.1em;
+   margin-top: 10px;
+   display: block;
+}
+
+input, select, textarea {
+   width: 100%;
+   padding: 10px;
+   margin-top: 5px;
+   border-radius: 5px;
+   border: 1px solid #ccc;
+   font-size: 1em;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+textarea {
+   height: 100px;
+}
+
+.confirm-btn {
+   background-color: #4d6a4d;
+   color: rgb(219, 234, 222);
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   font-size: 1.2em;
+   font-family: 'Courier New', Courier, monospace;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.confirm-btn:hover {
+   background-color: #5da661;
+}

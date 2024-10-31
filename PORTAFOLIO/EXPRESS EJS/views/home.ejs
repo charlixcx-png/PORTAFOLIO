@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/style.css">
+    <title>Main</title>
+</head>
+<body>
+    <%- include('header') %>
+    <h2>Hello, <%= username %></h2>
+    <h3>Posts</h3>
+    <form action="/create-post" method="POST">
+        <input type="text" name="title" placeholder="Title" required>
+        <textarea name="content" placeholder="Content" required></textarea>
+        <button type="submit">Create Publication</button>
+    </form>
+    <h2>Publications</h2>
+    <ul>
+        <% posts.forEach(post => { %> 
+          <li>
+            <h3><%= post.title %></h3>
+            <p><%= post.content.length > 100 ? post.content.substring(0, 100) + '...' : post.content %></p>
+            <a href="/post/<%= post.id %>">Read More</a>
+          </li>
+        <% }) %>
+    </ul>
+        
+    <%- include('footer') %>
+</body>
+</html>

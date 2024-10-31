@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <form action="/greet" method="GET">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <button type="submit">Greet</button>
+    </form>
+    <div id="greeting"></div>    
+    
+    <h2>TODO List</h2>
+      <form action="/task" method="POST">
+       <input type="text" name="task" placeholder="Enter a new task" required>
+        <button type="submit">Add Task</button>
+      </form>
+      <ul id="task-list"></ul>
+
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+        if (name) {
+            document.getElementById('greeting').innerText = `Hello, ${name}!`;
+        }
+    </script>
+    <script>
+        // Obtener las tareas al cargar la página
+        fetch('/task')
+            .then(response => response.json())
+            .then(tasks => {
+                const taskList = document.getElementById('task-list');
+                tasks.forEach((task, index) => {
+                    const li = document.createElement('li');
+                    li.textContent = task;
+                    taskList.appendChild(li);
+                });
+            });
+    </script>
+    
+    
+</body>
+</html>

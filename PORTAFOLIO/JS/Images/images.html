@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Exercise - Image Manipulation</title>
+    <script type="text/javascript" src="images.js"></script>
+</head>
+
+<body onload="startGame()">
+    <h1>Image Manipulation</h1>
+    <hr />
+    <p>Control the image using the arrow buttons below:</p>
+    <br />
+    <div style="text-align: center;">
+        <button onmousedown="moveup()" onmouseup="clearmove()">⬆️</button><br />
+        <button onmousedown="moveleft()" onmouseup="clearmove()">⬅️</button>
+        <button onmousedown="moveright()" onmouseup="clearmove()">➡️</button><br />
+        <button onmousedown="movedown()" onmouseup="clearmove()">⬇️</button>
+    </div>
+</body>
+
+</html>
